@@ -59,9 +59,9 @@ jobs:
           build/make dist
 
       - name: Upload redistributables
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: Redistributables
+          name: Redistributables-${{ matrix.os }}
           path: |
             build/out/hubfs-*-*.msi
             build/out/hubfs-*-*.zip
